@@ -82,7 +82,7 @@ class IEnhancedUserDataSchema(IUserDataSchema):
     telegram = schema.TextLine(
         title=_(u'label_telegram', default=u'Telegram account'),
         description=_(u'help_telegram',
-                      default=u'Fill in your telegram account.'),
+                      default=u'Fill in your Telegram account, in the format @telegram-nickname'),
         required=False,)
     skype = schema.TextLine(
         title=_(u'label_skype', default=u'Skype account'),
