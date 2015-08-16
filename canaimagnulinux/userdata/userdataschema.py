@@ -9,11 +9,26 @@ from zope import schema
 from zope.interface import implements
 
 
+class TermsNotAccepted(ValidationError):
+    __doc__ = _(u'You must accept the terms and conditions for registering an account!')
+
+
 def validateAccept(value):
     """ Validate if accepted the terms of use for this site. """
-    if value is not True:
-        return False
+
+    if not value:
+    # if value is not True:
+        # return False
+        raise TermsNotAccepted(value)
     return True
+
+
+def getCommonTerms():
+    """ Get the common terms of use for this site. """
+
+    commonterms_url = 'terminos-y-convenios/condiciones-generales-miembros'
+
+    return commonterms_url
 
 
 class UserDataSchemaProvider(object):
@@ -108,7 +123,8 @@ class IEnhancedUserDataSchema(IUserDataSchema):
     accept = schema.Bool(
         title=_(u'label_accept', default=u'Accept terms of use'),
         description=_(u'help_accept',
-                      default=u'Tick this box to indicate that you have found, read and accepted the <a id=\'commonterms\' target=\'_blank\' href=\'" + getCommonTerms() + "\'>terms of use</a> for this site.'),
+                      default=u'Tick this box to indicate that you have found, read and accepted the '
+                      '<a id=\'commonterms\' target=\'_blank\' href=\'" + getCommonTerms() + "\' title=\'Terms of use for this site.\'>terms of use</a> for this site.'),
                       # default=u'Tick this box to indicate that you have found,'
                       # ' read and accepted the terms of use for this site. '),
         required=True,
