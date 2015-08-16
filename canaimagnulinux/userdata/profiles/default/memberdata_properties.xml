@@ -13,6 +13,7 @@
   <property name="birthdate" type="string"></property>
   <property name="mobile" type="string"></property>
   <property name="officen" type="string"></property>
+  <property name="telegram" type="string"></property>
   <property name="skype" type="string"></property>
   <property name="institution" type="string"></property>
   <property name="instadd" type="string"></property>
