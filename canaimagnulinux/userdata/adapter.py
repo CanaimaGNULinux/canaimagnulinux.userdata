@@ -4,11 +4,7 @@ from plone.app.users.browser.personalpreferences import UserDataPanelAdapter
 
 
 class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
-    """
-    https://github.com/mingtak/prome.userdata/
-    https://github.com/mingtak/prome.userdata/blob/a3b78bd4350a06c523167795bc6f4070e1cb00d5/prome/userdata/userdataschema.py
-    https://github.com/silviot/gisweb.anagraficautenti/blob/8919ee0eb10a46a0ed955e6d13094c2bba59398f/gisweb/anagraficautenti/adapter.py
-    """
+    """ Making added fields available on the Personal Information form. """
 
     def get_firstname(self):
         return unicode(self.context.getProperty('firstname', ''), 'utf-8')
