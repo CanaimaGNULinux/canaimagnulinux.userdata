@@ -14,6 +14,7 @@
       <element value="country"/>
       <element value="mobile"/>
       <element value="officen"/>
+      <element value="irc"/>
       <element value="telegram"/>
       <element value="skype"/>
       <element value="institution"/>

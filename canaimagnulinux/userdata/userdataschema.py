@@ -74,6 +74,10 @@ class IEnhancedUserDataSchema(IUserDataSchema):
         description=_(u'help_officen',
                       default=u'Fill in your office number.'),
         required=False,)
+    irc = schema.TextLine(
+        title=_(u'label_irc', default=u'IRC nickname'),
+        description=_(u'help_irc',
+                      default=u'Fill in your IRC nickname.'),
     telegram = schema.TextLine(
         title=_(u'label_telegram', default=u'Telegram account'),
         description=_(u'help_telegram',

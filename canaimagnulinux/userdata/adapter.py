@@ -41,6 +41,14 @@ class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
         return unicode(self.context.setMemberProperties({'officen': value}), 'utf-8')
     officen = property(get_officen, set_officen)
 
+    def get_irc(self):
+        return unicode(self.context.getProperty('irc', ''), 'utf-8')
+
+    def set_irc(self, value):
+        return unicode(self.context.setMemberProperties({'irc': value}), 'utf-8')
+    irc = property(get_irc, set_irc)
+
+
     def get_telegram(self):
         return unicode(self.context.getProperty('telegram', ''), 'utf-8')
 
