@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from canaimagnulinux.web.policy import CanaimaPolicyMF as _
+from canaimagnulinux.userdata import _
 
 from plone.app.users.userdataschema import IUserDataSchema
 from plone.app.users.userdataschema import IUserDataSchemaProvider
