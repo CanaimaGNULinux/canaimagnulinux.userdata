@@ -13,7 +13,7 @@
       <element value="city"/>
       <element value="country"/>
       <element value="mobile"/>
-      <element value="officen"/>
+      <element value="officephone"/>
       <element value="irc"/>
       <element value="telegram"/>
       <element value="skype"/>

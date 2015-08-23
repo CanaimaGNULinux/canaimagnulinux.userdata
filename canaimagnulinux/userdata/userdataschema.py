@@ -69,9 +69,9 @@ class IEnhancedUserDataSchema(IUserDataSchema):
         description=_(u'help_mobile',
                       default=u'Fill in your mobile number.'),
         required=False,)
-    officen = schema.TextLine(
-        title=_(u'label_officen', default=u'Office number'),
-        description=_(u'help_officen',
+    officephone = schema.TextLine(
+        title=_(u'label_officephone', default=u'Office number'),
+        description=_(u'help_officephone',
                       default=u'Fill in your office number.'),
         required=False,)
     irc = schema.TextLine(

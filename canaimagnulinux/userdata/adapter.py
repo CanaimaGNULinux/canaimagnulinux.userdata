@@ -34,12 +34,12 @@ class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
         return unicode(self.context.setMemberProperties({'mobile': value}), 'utf-8')
     mobile = property(get_mobile, set_mobile)
 
-    def get_officen(self):
-        return unicode(self.context.getProperty('officen', ''), 'utf-8')
+    def get_officephone(self):
+        return unicode(self.context.getProperty('officephone', ''), 'utf-8')
 
-    def set_officen(self, value):
-        return unicode(self.context.setMemberProperties({'officen': value}), 'utf-8')
-    officen = property(get_officen, set_officen)
+    def set_officephone(self, value):
+        return unicode(self.context.setMemberProperties({'officephone': value}), 'utf-8')
+    officephone = property(get_officephone, set_officephone)
 
     def get_irc(self):
         return unicode(self.context.getProperty('irc', ''), 'utf-8')
