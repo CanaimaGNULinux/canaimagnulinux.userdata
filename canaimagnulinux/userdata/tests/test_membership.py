@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from canaimagnulinux.userdata.testing import INTEGRATION_TESTING
-from plone import api
-from plone.app.testing.interfaces import TEST_USER_ID
+# from plone import api
+# from plone.app.testing.interfaces import TEST_USER_ID
 
 import unittest
 
@@ -48,4 +48,3 @@ class MembershipPropertiesTestCase(unittest.TestCase):
         for f in FIELDS:
             self.assertIn(
                 f, user_registration_fields, 'not found: {0}'.format(f))
-

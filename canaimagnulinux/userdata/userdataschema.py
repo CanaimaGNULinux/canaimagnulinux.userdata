@@ -7,6 +7,7 @@ from plone.app.users.userdataschema import IUserDataSchemaProvider
 
 from zope import schema
 from zope.interface import implements
+from zope.schema import ValidationError
 
 
 class TermsNotAccepted(ValidationError):
@@ -16,9 +17,9 @@ class TermsNotAccepted(ValidationError):
 def validateAccept(value):
     """ Validate if accepted the terms of use for this site. """
 
-    if not value:
     # if value is not True:
-        # return False
+    #     return False
+    if not value:
         raise TermsNotAccepted(value)
     return True
 
@@ -40,7 +41,7 @@ class UserDataSchemaProvider(object):
 
 
 class IEnhancedUserDataSchema(IUserDataSchema):
-    """ Use all the fields from the default user data schema, 
+    """ Use all the fields from the default user data schema,
         and add various extra fields.
     """
     firstname = schema.TextLine(
@@ -130,7 +131,8 @@ class IEnhancedUserDataSchema(IUserDataSchema):
         description=_(u'help_accept',
                       default=u'Tick this box to indicate that you have found, read and accepted the '
                       '<a id=\'commonterms\' target=\'_blank\' href=\'" + getCommonTerms() + "\' title=\'Terms of use for this site.\'>terms of use</a> for this site.'),
-                      # default=u'Tick this box to indicate that you have found,'
-                      # ' read and accepted the terms of use for this site. '),
+        # description=_(u'help_accept',
+        #               default=u'Tick this box to indicate that you have found,'
+        #               ' read and accepted the terms of use for this site. '),
         required=True,
         constraint=validateAccept,)

@@ -48,7 +48,6 @@ class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
         return unicode(self.context.setMemberProperties({'irc': value}), 'utf-8')
     irc = property(get_irc, set_irc)
 
-
     def get_telegram(self):
         return unicode(self.context.getProperty('telegram', ''), 'utf-8')
 
@@ -126,9 +125,9 @@ class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
     #     return unicode(self.context.setMemberProperties({'newsletter': value}), 'utf-8')
     # newsletter = property(get_newsletter, set_newsletter)
 
-    # def get_accept(self):
-    #     return unicode(self.context.getProperty('accept', ''), 'utf-8')
+    def get_accept(self):
+        return unicode(self.context.getProperty('accept', ''), 'utf-8')
 
-    # def set_accept(self, value):
-    #     return unicode(self.context.setMemberProperties({'accept': value}), 'utf-8')
-    # accept = property(get_accept, set_accept)
+    def set_accept(self, value):
+        return unicode(self.context.setMemberProperties({'accept': value}), 'utf-8')
+    accept = property(get_accept, set_accept)
