@@ -7,25 +7,6 @@ from canaimagnulinux.userdata.testing import INTEGRATION_TESTING
 import unittest
 
 FIELDS = [
-    # 'firstname',
-    # 'lastname',
-    # 'gender',
-    # 'birthdate',
-    # 'mobile',
-    # 'officephone',
-    # 'irc',
-    # 'telegram',
-    # 'skype',
-    # 'twitter',
-    # 'instagram',
-    # 'facebook',
-    # 'country',
-    # 'city',
-    # 'institution',
-    # 'instadd',
-    # 'position',
-    # 'profession',
-    # 'newsletter',
     'accept',
 ]
 
