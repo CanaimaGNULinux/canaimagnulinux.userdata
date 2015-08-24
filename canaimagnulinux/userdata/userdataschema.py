@@ -90,6 +90,21 @@ class IEnhancedUserDataSchema(IUserDataSchema):
         description=_(u'help_skype',
                       default=u'Fill in your skype account.'),
         required=False,)
+    twitter = schema.TextLine(
+        title=_(u'label_twitter', default=u'Twitter account'),
+        description=_(u'help_twitter',
+                      default=u'Fill in your Twitter account.'),
+        required=False,)
+    instagram = schema.TextLine(
+        title=_(u'label_instagram', default=u'Instagram account'),
+        description=_(u'help_instagram',
+                      default=u'Fill in your Instagram account.'),
+        required=False,)
+    facebook = schema.TextLine(
+        title=_(u'label_facebook', default=u'Facebook account'),
+        description=_(u'help_facebook',
+                      default=u'Fill in your Facebook account.'),
+        required=False,)
     country = schema.TextLine(
         title=_(u'label_country', default=u'Country'),
         description=_(u'help_country',

@@ -4,23 +4,27 @@
   <object name="site_properties" meta_type="Plone Property Sheet">
     <property name="user_registration_fields" type="lines">
       <element value="fullname"/>
-      <element value="firstname"/>
-      <element value="lastname"/>
+      <!--<element value="firstname"/>
+      <element value="lastname"/>-->
       <element value="username"/>
-      <element value="gender"/>
-      <element value="birthdate"/>
+      <!--<element value="gender"/>
+      <element value="birthdate"/>-->
       <element value="email"/>
-      <element value="city"/>
+      <!--<element value="city"/>
       <element value="country"/>
       <element value="mobile"/>
       <element value="officephone"/>
       <element value="irc"/>
       <element value="telegram"/>
       <element value="skype"/>
+      <element value="twitter"/>
+      <element value="instagram"/>
+      <element value="facebook"/>
       <element value="institution"/>
       <element value="instadd"/>
       <element value="position"/>
-      <element value="profession"/>
+      <element value="profession"/>-->
+      <element value="accept"/>
     </property>
   </object>
 

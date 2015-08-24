@@ -62,6 +62,27 @@ class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
         return unicode(self.context.setMemberProperties({'skype': value}), 'utf-8')
     skype = property(get_skype, set_skype)
 
+    def get_twitter(self):
+        return unicode(self.context.getProperty('twitter', ''), 'utf-8')
+
+    def set_twitter(self, value):
+        return unicode(self.context.setMemberProperties({'twitter': value}), 'utf-8')
+    twitter = property(get_twitter, set_twitter)
+
+    def get_instagram(self):
+        return unicode(self.context.getProperty('instagram', ''), 'utf-8')
+
+    def set_instagram(self, value):
+        return unicode(self.context.setMemberProperties({'instagram': value}), 'utf-8')
+    instagram = property(get_instagram, set_instagram)
+
+    def get_facebook(self):
+        return unicode(self.context.getProperty('facebook', ''), 'utf-8')
+
+    def set_facebook(self, value):
+        return unicode(self.context.setMemberProperties({'facebook': value}), 'utf-8')
+    facebook = property(get_facebook, set_facebook)
+
     def get_birthdate(self):
         return unicode(self.context.getProperty('birthdate', ''), 'utf-8')
 
