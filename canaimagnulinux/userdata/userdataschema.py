@@ -130,7 +130,7 @@ class IEnhancedUserDataSchema(IUserDataSchema):
         title=_(u'label_accept', default=u'Accept terms of use'),
         description=_(u'help_accept',
                       default=u'Tick this box to indicate that you have found, read and accepted the '
-                      '<a id=\'commonterms\' target=\'_blank\' href=\'" + getCommonTerms() + "\' title=\'Terms of use for this site.\'>terms of use</a> for this site.'),
+                      '<a id=\'commonterms\' target=\'_blank\' href=\'' + getCommonTerms() + '\' title=\'Terms of use for this site.\'>terms of use</a> for this site.'),
         # description=_(u'help_accept',
         #               default=u'Tick this box to indicate that you have found,'
         #               ' read and accepted the terms of use for this site. '),
