@@ -149,5 +149,5 @@ class IEnhancedUserDataSchema(IUserDataSchema):
         # description=_(u'help_accept',
         #               default=u'Tick this box to indicate that you have found,'
         #               ' read and accepted the terms of use for this site. '),
-        required=True,
+        required=False,
         constraint=validateAccept,)
